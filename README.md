@@ -13,7 +13,6 @@ configured as a proxy for YouTrack
 ### Installation
 
 1. Setup directories
-  sudo mkdir -p /var/log/nginx
 
 2. Install [Docker](https://www.docker.io/).
 
@@ -31,6 +30,7 @@ configured as a proxy for YouTrack
 
 # Setup directories
   sudo mkdir -p /etc/nginx/ssl
+  sudo mkdir -p /var/log/nginx
 
 Open `http://<host>` to see the welcome page.
 
