@@ -19,6 +19,8 @@ configured as a proxy for YouTrack
 3. Build an image from Dockerfile:
   docker build -t="miniter/nginx_yt" github.com/miniter/nginx_yt
 
+4. Copy wildcard_chain.pem and wildcard.key to /etc/nginx/ssl.  
+
 
 ### Usage
 
