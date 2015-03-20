@@ -34,13 +34,13 @@ ADD startup.sh /opt/
 RUN chmod +x /opt/startup.sh
 
 # Define mountable directories.
-VOLUME ["/data", "/etc/nginx/sites-enabled", "/var/log/nginx", "/var/www/es", "/var/www/es_public", "/etc/nginx/ssl"]
+VOLUME ["/data", "/etc/nginx/sites-enabled", "/var/log/nginx", "/etc/nginx/ssl"]
 
 # Define working directory.
 WORKDIR /etc/nginx
 
 # Expose ports.
-EXPOSE 80
+EXPOSE 443
 
 # Define default command - script to modify nginx config and start nginx
 ENTRYPOINT ["/opt/startup.sh"]
