@@ -27,7 +27,7 @@ configured as a proxy for YouTrack
 
 #### Attach persistent/shared directories
 
-    docker run -d -p 443:443 --link youtrack:youtrack -v /var/log/nginx:/var/log/nginx -v /var/www/es:/var/www/es -v /var/www/es_public:/var/www/es_public -v /etc/nginx/ssl:/etc/nginx/ssl miniter/nginx_yt
+    docker run -d -p 443:443 --link youtrack:youtrack -v /var/log/nginx:/var/log/nginx -v /etc/nginx/ssl:/etc/nginx/ssl miniter/nginx_yt
 
 # Setup directories
   sudo mkdir -p /etc/nginx/ssl
