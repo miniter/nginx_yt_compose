@@ -7,7 +7,7 @@ configured as a proxy for YouTrack
 
 ### Dependencies
 
-* [dockerfile/ubuntu](http://dockerfile.github.io/#/ubuntu)
+* [dockerfile/nginx](http://dockerfile.github.io/#/nginx)
 
 
 ### Installation
