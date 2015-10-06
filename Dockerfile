@@ -1,31 +1,21 @@
 ############################################################
 #
 # Nginx Dockerfile
-# Based on Ubuntu
+# Based on CentOs
 # https://github.com/jbasdf/nginx
 # forked from https://github.com/dockerfile/nginx
 #
 ############################################################
 
 # Pull base image.
-FROM dockerfile/ubuntu
-
-MAINTAINER Justin Ball justinball@gmail.com
-
-# Install Nginx.
-RUN add-apt-repository -y ppa:nginx/stable
-RUN apt-get update
-RUN apt-get install -y nano wget dialog net-tools
-RUN apt-get install -y nginx
+FROM nginx
 
 # Remove the default Nginx configuration file
 RUN rm -v /etc/nginx/nginx.conf
 
 # Copy a configuration file from the current directory
 ADD nginx.conf /etc/nginx/
-ADD nginx_es.conf /etc/nginx/
-ADD nginx_cors.conf /etc/nginx/
-ADD nginx_deny.conf /etc/nginx/
+ADD nginx_yt.conf /etc/nginx/
 
 # Copy startup script
 ADD startup.sh /opt/
