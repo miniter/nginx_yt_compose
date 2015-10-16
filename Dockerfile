@@ -15,7 +15,7 @@ RUN rm -v /etc/nginx/nginx.conf
 
 # Copy a configuration file from the current directory
 ADD nginx.conf /etc/nginx/
-ADD nginx_yt.conf /etc/nginx/
+ADD nginx_yt.conf.original /etc/nginx/
 
 # Copy startup script
 ADD startup.sh /opt/
