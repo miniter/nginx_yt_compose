@@ -1,5 +1,9 @@
 # Pass requests to YouTrack
 
+location / {
+    proxy_pass http://<proxy_pass_ip>:<proxy_pass_port>;
+}
+
 location /api/eventSourceBus {
     proxy_cache off;
     proxy_buffering off;
@@ -7,6 +11,6 @@ location /api/eventSourceBus {
     proxy_send_timeout 86400s;
     proxy_set_header Connection '';
     chunked_transfer_encoding off;
+    proxy_pass http://<proxy_pass_ip>:<proxy_pass_port>;
 }
-    
-proxy_pass http://<proxy_pass_ip>:<proxy_pass_port>;
+
